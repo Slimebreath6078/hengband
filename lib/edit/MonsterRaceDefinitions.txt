@@ -27140,3 +27140,52 @@ D:$It is seldom found but greatly formidable.
 D:$  You'll be defeated without complete preparation.
 D:それはめったに出会えないが、恐ろしく強力な力を持っている。
 D:生半可な態勢で挑めばあっという間に返り討ちにされるだろう。
+
+# 特殊仕様で以下の特性あり
+# ・一度に受けるダメージは現在HPの10%まで。
+# ・ただしこの軽減効果は最大HPの0.9%を下回らない。
+# ・救援召喚はウサウサストライカー（後述）を
+#   2体召喚する。
+# このダメージキャップは最低33回攻撃を受けないと死なない。
+# 元ネタにはある延命がないため、その分ダメージキャップは盛っている。
+# （ちなみに元ネタでは31回なのでそれでも本来より2回多いが）
+N:1355:ラフィーII
+E:Laffey II
+G:g:w
+I:130:60d100:40:200:30
+W:90:6:90000:0:0
+B:SHOOT:HURT:15d15
+B:PUNCH:SUPERHURT:15d15
+B:HIT:HURT:10d10
+B:KICK:HURT:10d10
+X:FEMALE
+F:ONLY_ONE | NONLIVING | GOOD | FORCE_MAXHP | FORCE_DEPTH | SPEAK_ALL |
+F:POWERFUL | WEIRD_MIND | LAFFEY_II |
+F:IM_FIRE | IM_COLD | IM_POIS | RES_DARK | RES_LITE | RES_DISE | RES_CHAO | RES_WATE |
+F:NO_CONF | NO_FEAR | NO_INSTANTLY_DEATH |
+F:OPEN_DOOR | BASH_DOOR | MOVE_BODY | TAKE_ITEM | CAN_SWIM | SMART | POWERFUL |
+F:DROP_CORPSE | DROP_GREAT | DROP_2D2 |
+S:1_IN_2
+S:ROCKET | PSY_SPEAR | SHOOT | S_KIN | TELE_TO |
+R:1356:2d1
+D:$Laffey became extremely stronger...
+D:$ Yep, became stronger... Zzzzz...
+D:ラフィーとっても強くなった…
+D:うん、強くなった……Zzzz…
+
+N:1356:ウサウサストライカー
+E:Bunbun Striker
+G:*:w
+I:120:40d25:50:100:0
+W:90:15:10000:0:0
+F:NONLIVING | FORCE_MAXHP | EMPTY_MIND | SMART |
+F:CAN_FLY | RAND_25 | NEVER_BLOW |
+F:HURT_FIRE | IM_COLD | IM_POIS | RES_DARK | RES_LITE | RES_DISE | RES_CHAO | RES_WATE |
+F:NO_CONF | NO_FEAR | NO_SLEEP | NO_STUN |
+S:1_IN_2
+S:PSY_SPEAR | BO_LITE |
+D:$It is a part of the Laffey II's rigging, and bunny-looking, propeller-less, and futuristic drone.
+D:$ It can project light-bolt that burns a point through a target.
+D:ラフィーIIの艤装の一部で、兎を模したプロペラのない未来的なドローンだ。
+D:光の矢が放たれるようになっており、それを通ったものには風穴が空く。
+
