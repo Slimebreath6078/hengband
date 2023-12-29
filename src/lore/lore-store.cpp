@@ -96,6 +96,7 @@ int lore_do_probe(PlayerType *player_ptr, MonsterRaceId r_idx)
     n += count_lore_mflag_group(r_ptr->behavior_flags, r_ptr->r_behavior_flags);
     n += count_lore_mflag_group(r_ptr->drop_flags, r_ptr->r_drop_flags);
     n += count_lore_mflag_group(r_ptr->feature_flags & feature_lore_flags2, r_ptr->r_feature_flags);
+    n += count_lore_mflag_group(r_ptr->special_flags, r_ptr->r_special_flags);
 
     r_ptr->r_flags1 = r_ptr->flags1;
     r_ptr->r_flags2 = r_ptr->flags2;
@@ -105,6 +106,7 @@ int lore_do_probe(PlayerType *player_ptr, MonsterRaceId r_idx)
     r_ptr->r_behavior_flags = r_ptr->behavior_flags;
     r_ptr->r_drop_flags = r_ptr->drop_flags;
     r_ptr->r_feature_flags.set(r_ptr->feature_flags & feature_lore_flags2);
+    r_ptr->r_special_flags = r_ptr->special_flags;
 
     if (!r_ptr->r_can_evolve) {
         n++;
