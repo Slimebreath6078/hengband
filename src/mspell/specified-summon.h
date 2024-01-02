@@ -19,3 +19,4 @@ MONSTER_NUMBER summon_VESPOID(PlayerType *player_ptr, POSITION y, POSITION x, in
 MONSTER_NUMBER summon_YENDER_WIZARD(PlayerType *player_ptr, POSITION y, POSITION x, MONSTER_IDX m_idx);
 MONSTER_NUMBER summon_THUNDERS(PlayerType *player_ptr, POSITION y, POSITION x, int rlev, MONSTER_IDX m_idx);
 MONSTER_NUMBER summon_PLASMA(PlayerType *player_ptr, POSITION y, POSITION x, int rlev, MONSTER_IDX m_idx);
+MONSTER_NUMBER summon_LAFFEY_II(PlayerType *player_ptr, POSITION y, POSITION x, MONSTER_IDX m_idx);

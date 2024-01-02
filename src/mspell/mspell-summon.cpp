@@ -114,8 +114,8 @@ static void decide_summon_kin_caster(
 #ifdef JP
         (void)m_poss;
 #endif
-        _(msg_format("%sが魔法で%sを召喚した。", m_name, (r_ptr->kind_flags.has(MonsterKindType::UNIQUE) ? "手下" : "仲間")),
-            msg_format("%s^ magically summons %s %s.", m_name, m_poss, (r_ptr->kind_flags.has(MonsterKindType::UNIQUE) ? "minions" : "kin")));
+        _(msg_format("%sが魔法で%sを召喚した。", m_name, (r_ptr->kind_flags.has(MonsterKindType::UNIQUE) || m_ptr->r_idx == MonsterRaceId::LAFFEY_II ? "手下" : "仲間")),
+            msg_format("%s^ magically summons %s %s.", m_name, m_poss, (r_ptr->kind_flags.has(MonsterKindType::UNIQUE) || m_ptr->r_idx == MonsterRaceId::LAFFEY_II ? "minions" : "kin")));
     }
 
     if (mon_to_mon && known && !see_either) {
@@ -203,6 +203,9 @@ MonsterSpellResult spell_RF6_S_KIN(PlayerType *player_ptr, POSITION y, POSITION 
         break;
     case MonsterRaceId::OOTSUKI:
         count += summon_PLASMA(player_ptr, y, x, rlev, m_idx);
+        break;
+    case MonsterRaceId::LAFFEY_II:
+        count += summon_LAFFEY_II(player_ptr, y, x, m_idx);
         break;
     default:
         count += summon_Kin(player_ptr, y, x, rlev, m_idx);
