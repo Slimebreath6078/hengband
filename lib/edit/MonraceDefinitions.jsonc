@@ -87414,6 +87414,62 @@
         "ja": "それは冒険者の来店を待っている。持ち物を狙って…",
         "en": "It waits for your coming. Aims at your things..."
       }
+    },
+    {
+      "id": 1364,
+      "name": {
+        "ja": "地下水道のヌシ『クロウリー様』",
+        "en": "Krawlie, the guardian of an underground watercourse"
+      },
+      "symbol": {
+        "character": "w",
+        "color": "Green"
+      },
+      "level": 30,
+      "hit_point": "20d25",
+      "armor_class": 70,
+      "speed": 5,
+      "rarity": 2,
+      "vision": 20,
+      "alertness": 15,
+      "exp": 1800,
+      "flags": [
+        "UNIQUE",
+        "ANIMAL",
+        "EVIL",
+        "STUPID",
+        "SPEAK_ALL",
+        "MOVE_BODY",
+        "DROP_CORPSE",
+        "DROP_2D2",
+        "DROP_4D2",
+        "NO_SLEEP",
+        "NO_CONF",
+        "NO_FEAR"
+      ],
+      "blows": [
+        {
+          "method": "HIT",
+          "damage_dice": "5d10",
+          "effect": "HURT"
+        }
+      ],
+      "skill": {
+        "probability": "1_IN_6",
+        "list": [
+          "HAND_DOOM"
+        ]
+      },
+      "escorts": [
+        {
+          "escort_num": "3d2",
+          "escorts_id": 296
+        }
+      ],
+      "flavor": {
+        "ja": "虫が突然変異して生まれた強力なミュータントだ。それに立ち向かうものは容赦なく打ち据えられるだろう。",
+        "en": "A mutant that was born by mutating a caterpillar. A challenger against it will be hit mercilessly and hard."
+      }
     }
   ]
 }
